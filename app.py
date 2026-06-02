@@ -39,6 +39,9 @@ input_data = pd.DataFrame({
 "Performance_Index":[performance_index]
 })
 if st.button("Predict"):
+	input_data = input_data.reindex(
+    columns=model.feature_names_in_,
+    fill_value=0)
 	prediction = model.predict(
 	input_data
 	)
