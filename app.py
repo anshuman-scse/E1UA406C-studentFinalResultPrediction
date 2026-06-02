@@ -39,9 +39,9 @@ input_data = pd.DataFrame({
 "Performance_Index":[performance_index]
 })
 if st.button("Predict"):
-prediction = model.predict(
-input_data
-)
+	prediction = model.predict(
+	input_data
+	)
 if prediction[0]==1:
 st.success("PASS")
 else:
